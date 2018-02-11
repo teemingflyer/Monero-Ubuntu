@@ -28,13 +28,14 @@ Then you will run xmr-stak-cpu for the first time making sure it is executable:
 
 Yu will get threading config like below: 
 
-> **************** Copy&Paste BEGIN ****************
->"cpu_threads_conf" :
->[
-  >  { "low_power_mode" : false, "no_prefetch" : true, "affine_to_cpu" : 0 },
-   > { "low_power_mode" : false, "no_prefetch" : true, "affine_to_cpu" : 1 },
-    >{ "low_power_mode" : false, "no_prefetch" : true, "affine_to_cpu" : 2 },
-    >{ "low_power_mode" : false, "no_prefetch" : true, "affine_to_cpu" : 3 },
+```
+**************** Copy&Paste BEGIN ****************
+"cpu_threads_conf" :
+[
+    { "low_power_mode" : false, "no_prefetch" : true, "affine_to_cpu" : 0 },
+    { "low_power_mode" : false, "no_prefetch" : true, "affine_to_cpu" : 1 },
+    { "low_power_mode" : false, "no_prefetch" : true, "affine_to_cpu" : 2 },
+    { "low_power_mode" : false, "no_prefetch" : true, "affine_to_cpu" : 3 },
     { "low_power_mode" : false, "no_prefetch" : true, "affine_to_cpu" : 4 },
     { "low_power_mode" : false, "no_prefetch" : true, "affine_to_cpu" : 5 },
     { "low_power_mode" : false, "no_prefetch" : true, "affine_to_cpu" : 6 },
@@ -44,9 +45,10 @@ Yu will get threading config like below:
     { "low_power_mode" : false, "no_prefetch" : true, "affine_to_cpu" : 10 },
     { "low_power_mode" : false, "no_prefetch" : true, "affine_to_cpu" : 11 },
     { "low_power_mode" : false, "no_prefetch" : true, "affine_to_cpu" : 12 },
->],
->**************** Copy&Paste END ****************
+],
+**************** Copy&Paste END ****************
 
+```
 
 ### Edit XMR-Stak-CPU Config File
 
@@ -54,10 +56,11 @@ Add Above thread conf and below pool details in config.txt
 
 > vi config.txt
 
->"pool_address": "pool.usxmrpool.com:3333",
->"wallet_address": "43VXR67CfX5NcbXna9EZjwFnBhGrnqxc4Usw2CGxrGH8YaiUPfTsBacLgVcCmUrWGqdCVMsLDhbj1CDjNs5KgKcg98C8XH5",
->"pool_password": "WorkerName:Email@EMail.com",
-
+```
+"pool_address": "pool.usxmrpool.com:3333",
+"wallet_address": "43VXR67CfX5NcbXna9EZjwFnBhGrnqxc4Usw2CGxrGH8YaiUPfTsBacLgVcCmUrWGqdCVMsLDhbj1CDjNs5KgKcg98C8XH5",
+"pool_password": "WorkerName:Email@EMail.com",
+```
 
 ### Setup Huge Pages
 If you run into issues related to mmap this means you need to enable hugepages. To do this type the following commands:
@@ -86,14 +89,16 @@ WantedBy=multi-user.target
 ```
 Now run the following commands:
 
->sudo systemctl daemon-reload
->sudo systemctl enable xmr.service
+```
+sudo systemctl daemon-reload
+sudo systemctl enable xmr.service
+```
 
 To control the service:
-
->sudo systemctl status xmr.service
->sudo systemctl start xmr.service
->sudo systemctl stop xmr.service
->sudo systemctl restart xmr.service
-
+```
+sudo systemctl status xmr.service
+sudo systemctl start xmr.service
+sudo systemctl stop xmr.service
+sudo systemctl restart xmr.service
+```
 
