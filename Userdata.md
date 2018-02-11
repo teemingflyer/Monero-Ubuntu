@@ -74,15 +74,16 @@ If your server loses power or reboots for any reason, this will automatically st
 
 > vi /lib/systemd/system/xmr.service
 
->[Unit]
->Description=xmr
->After=network.target
->[Service]
->ExecStart=/usr/local/src/xmr-stak-cpu/bin/xmr-stak-cpu -c /usr/local/src/xmr-stak-cpu/bin/config.txt
->User=root
->[Install]
->WantedBy=multi-user.target
-
+```
+[Unit]
+Description=xmr
+After=network.target
+[Service]
+ExecStart=/usr/local/src/xmr-stak-cpu/bin/xmr-stak-cpu -c /usr/local/src/xmr-stak-cpu/bin/config.txt
+User=root
+[Install]
+WantedBy=multi-user.target
+```
 Now run the following commands:
 
 >sudo systemctl daemon-reload
