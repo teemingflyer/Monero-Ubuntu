@@ -2,20 +2,16 @@ This will show you how to install and run xmr-stak-cpu on Ubuntu 16.04.
 
 #### Install XMR-Stak-CPU Required Packages
 
-> sudo apt-get --assume-yes update
+```
+sudo apt-get --assume-yes update
+sudo apt-get --assume-yes install libmicrohttpd-dev libssl-dev cmake build-essential libhwloc-dev screen git nano
+cd /usr/local/src/
+git clone https://github.com/fireice-uk/xmr-stak-cpu.git
+cd xmr-stak-cpu
+cmake .
+make install
 
-> sudo apt-get --assume-yes install libmicrohttpd-dev libssl-dev cmake build-essential libhwloc-dev screen git nano
-
-> cd /usr/local/src/
-
-> git clone https://github.com/fireice-uk/xmr-stak-cpu.git
-
-> cd xmr-stak-cpu
-
-> cmake .
-
-> make install
-
+```
 After make install runs you will need to change directories:
 
 > cd bin/
