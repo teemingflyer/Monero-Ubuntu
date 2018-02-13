@@ -63,8 +63,10 @@ Add Above thread conf and below pool details in config.txt
 ### Setup Huge Pages
 If you run into issues related to mmap this means you need to enable hugepages. To do this type the following commands:
 
->sysctl -w vm.nr_hugepages=128
->vi /etc/sysctl.conf
+'''
+sysctl -w vm.nr_hugepages=128
+vi /etc/sysctl.conf
+'''
 
 At the end of the sysctl.conf file add:
 
